@@ -1,38 +1,125 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --background-card-color: rgb(194, 223, 224);
+  --background-navbar-color: rgb(50, 191, 191);
+  --color-basic-font:  rgb(65, 105, 100);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p, h3, h2 {
+  color: var(--color-basic-font);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* NAVBAR */
+.Navbar {
+  background-color: var(--background-navbar-color);
+  padding: 2%;
+  display: flex;
+  justify-content: center;
+}
+
+.cardsDiv, .BeersCardDiv, .BeerCardDiv, .FormDiv form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 4%;
+}
+
+.cardsDiv div, .BeersCardDiv a, .BeerCardDiv div {
+  cursor: pointer;
+  width: 90%;
+  padding: 4%;
+  margin: 3% 0%;
+  border-radius: 10px;
+  background-color: var(--background-card-color);
+}
+
+.cardsDiv div img {
+  width: 100%;
+  object-fit: contain;
+  margin: 2% 0%;
+  border-radius: 10px;
+}
+
+.cardsDiv div p, .cardsDiv div h3 {
+  padding: 0% 2%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* BEERS CARD */
+
+.BeersCardDiv a{
+  display: flex;
+  align-items: center;
+}
+
+.BeersCardDiv a div img {
+  height: 140px;
+}
+
+.BeersCardDiv a div:first-child{
+  text-align: center;
+  width: 25%;
+  margin-right: 4%;
+}
+
+.BeersCardDiv a div:last-child{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+/* BEER DETAIL */
+.BeerCardDiv div div:nth-child(1) {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.BeerCardDiv div div div {
+  width: 100%;
+  display: flex;
+  padding: 0%;
+  justify-content: space-around !important;
+}
+
+.BeerCardDiv div:first-child img {
+  align-items: center;
+  height: 240px;
+}
+
+/* FORM */
+form > * {
+  margin: 0.5%;
+  text-align: center;
+  width: 85%;
+}
+
+form input, form textarea {
+  margin-bottom: 4%;
+  background-color: var(--background-card-color);
+  border: none;
+  padding: 1%;
+  border-radius: 10px;
+}
+
+form button {
+  margin-top: 4%;
+  background-color: var(--background-navbar-color);
+  border: none;
+  padding: 2%;
   color: white;
+  border-radius: 20px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ERROR */
+.errorDiv{
+  display: flex;
+  justify-content: center;
 }
